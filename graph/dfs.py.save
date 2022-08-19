@@ -1,0 +1,48 @@
+
+"""
+  A @@@ B      C     H
+  @ @          @     @
+  @  @         @     @
+  @    @       @     @
+  D @@@ E @@@@ F @@@ G
+"""
+
+
+#graph dict
+adjDict={
+    "A":["B","E","D"],
+    "B":["A"],
+    "C":["F"],
+    "D":["A","E"],
+    "E":["D","A","F"],
+    "F":["E","C","G"],
+    "G":["F","H"],
+    "H":["G"]
+  }
+
+
+
+visited={}
+explored={}
+parent={}
+level={}
+
+dfs_traversal_output=[]
+queue=[]
+
+for node in adjDict.keys():
+   visited[node]=False
+   parent[node]=None
+   level[node]=-1
+   explored[node]=False
+
+
+s="E"
+visited[s]=True
+level[s]=0
+
+
+while len(queue) != 0:
+
+
+
