@@ -83,13 +83,13 @@ def dfs(root_node):
         dfs(node)
 
 
-root_node="F"
+root_node="A"
 visited[root_node]=True
 level[root_node]=0
 dfs(root_node)
 
 path=[]
-tn="A"
+tn="F"
 while tn:
    path.append(tn)
    tn=parent[tn]
